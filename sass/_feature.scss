@@ -1,0 +1,133 @@
+.feature {
+  &-title {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 58px;
+  }
+  &-desc {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: $desc-color;
+    max-width: 490px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 35px;
+    margin-bottom: 75px;
+  }
+  &-item {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+
+      object-fit: cover;
+    }
+  }
+  &-lable {
+    position: absolute;
+    padding: 6px 18px;
+    color: $main-color;
+    background-color: $white-color;
+    border-radius: 18px;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    font-weight: 600;
+  }
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  &-name {
+    display: flex;
+    flex-direction: column;
+  }
+  &-location {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &-date {
+    font-size: 12px;
+    font-weight: 400;
+    color: $desc-color;
+  }
+  &-btn,
+  &-seemore {
+    padding: 12px 20px;
+    box-shadow: none;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: $white-color;
+    color: $main-color;
+    border: 1px solid $main-color;
+    transition: all linear 0.25s;
+
+    
+    &:hover {
+      background-color: $main-color;
+      color: $white-color;
+    }
+  }
+  &-seemore {
+    display: block;
+    padding: 20px 60px;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 85px;
+  }
+}
+
+// resposive
+
+@media screen and (max-width: 1366.98px) {
+  .feature-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .feature-list {
+    gap: 30px;
+  }
+  .feature-seemore {
+    padding: 18px 58px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .container {
+    padding: 0 30px;
+  }
+  .feature-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .feature-title {
+    font-size: 39px;
+
+    line-height: 50px;
+  }
+  .feature-seemore {
+    padding: 18px 58px;
+  }
+  .feature-seemore {
+    padding: 15px 55px;
+  }
+}

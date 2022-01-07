@@ -1,0 +1,128 @@
+.plan {
+  margin-bottom: 150px;
+  &-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    &-title {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 58px;
+    }
+    &-desc {
+      max-width: 550px;
+      color: $desc-color;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 30px;
+      color: $main-color;
+      .active {
+        background-color: $main-color;
+        color: $white-color;
+      }
+    }
+  }
+  &-btn-slide {
+    ion-icon {
+      font-size: 20px;
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px;
+  }
+  &-item {
+    
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all linear 0.25s;
+    &:hover{
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+  }
+  &-bottom {
+    padding: 25px;
+  }
+  &-location {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #fc747b;
+    margin-bottom: 20px;
+  }
+  &-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  &-date {
+    font-size: 12px;
+    color: $desc-color;
+    margin-bottom: 18px;
+  }
+  &-review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-price {
+    font-size: 28px;
+    font-weight: 600;
+    color: $main-color;
+  }
+  &-star {
+    font-size: 28px;
+    color: $desc-color;
+    ion-icon {
+      color: #ffca00;
+    }
+  }
+}
+
+// resposive
+
+@media screen and (max-width: 1023.98px) {
+  .plan-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .plan-heading-desc {
+    max-width: 450px;
+  }
+  .plan-btn-slide {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .plan-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+  .plan-heading-title {
+    font-size: 35px;
+    line-height: 48px;
+  }
+  .plan-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .plan-heading-desc {
+    margin-bottom: 30px;
+  }
+  .plan-btn-slide {
+    padding: 10px;
+  }
+  .plan-item {
+    margin-top: -20px;
+  }
+}
